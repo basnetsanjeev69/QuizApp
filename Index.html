@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz app</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="primary-header" id="home">
+        <div class="left">
+          <div>
+            <h1>XYZ University</h1>
+          </div>
+        </div>
+        <div class="right">
+          <input type="checkbox" id="check" />
+          <label for="check" class="menu-icon">
+            <i class="fa-solid fa-bars"></i
+          ></label>
+          <ul class="navigation">
+            <li><a href="#skill">Home</a></li>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+      <div class="subject">
+        <div class="subject-name">
+          <h3>Unit 3243 Web Development</h3>
+        </div>
+        <div class="timer" id="timer"></div>
+      </div>
+      <div class="welcome" id="welcome">
+        <div class="message">
+          <h3>Welcome to weekly quiz</h3>
+          <hr />
+          <p>
+            You will have four question with three different choices and one
+            minute to finish.
+          </p>
+        </div>
+        <div class="startb">
+          <button class="start" onclick="start()" type="button">Start</button>
+        </div>
+      </div>
+
+      <div class="quiz" id="quiz">
+        <h3>QUIZ</h3>
+        <form action="#">
+          <!-- First Question -->
+          <p>Who is making the Web standards?</p>
+          <input type="radio" id="q11" name="question1" value="WWW" />
+          <label for="q11">The World Wide Web Consortium</label><br />
+          <input type="radio" id="q12" name="question1" value="Google" />
+          <label for="q11">Google</label><br />
+          <input type="radio" id="q13" name="question1" value="Microsoft" />
+          <label for="q11">Microsoft</label><br />
+
+          <!-- Second Question -->
+          <p>Choose the correct HTML element for the largest heading:</p>
+          <input type="radio" id="q21" name="question2" value="h1" />
+          <label for="q21">h1</label><br />
+          <input type="radio" id="q22" name="question2" value="h2" />
+          <label for="q22">h2</label><br />
+          <input type="radio" id="q23" name="question2" value="h6" />
+          <label for="q23">h6</label><br />
+
+          <!-- Third question -->
+          <p>Which HTML tag is used to define an internal style sheet?</p>
+          <input type="radio"  id="q31" name="question3" value="css" />
+          <label for="q31">CSS </label><br />
+          <input type="radio" id="q32" name="question3" value="script" />
+          <label for="q32">Script</label><br />
+          <input type="radio" id="q33" name="question3" value="style" />
+          <label for="q33">Style</label><br />
+
+          <!-- Fourth question -->
+          <p>Which HTML attribute is used to define inline styles?</p>
+          <input type="radio" id="q41" name="question4" value="font" />
+          <label for="q41">Font</label><br />
+          <input type="radio" id="q42" name="question4" value="class" />
+          <label for="q42">Class</label><br />
+          <input type="radio" id="q43" name="question4" value="style" />
+          <label for="q43">Style</label><br />
+
+          <!-- Submit button -->
+          <div class="buttons">
+            <button class="submit" onclick="check()" type="button">
+              Submit
+            </button>
+            <button class="back" onclick="back()" type="button">Back</button>
+          </div>
+        </form>
+      </div>
+      <div class="scoredisplay" id="scoredisplay">
+        <h3>Congratulation!!</h3>
+        <div class="score" id="score"></div>
+      </div>
+      <div class="timerout" id="timerout">
+        <h3 class="error">Sorry time out!!!</h3>
+      </div>
+    </div>
+  </body>
+</html>

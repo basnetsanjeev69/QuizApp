@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  .subject {
+    .timer {
+      display: none;
+    }
+  }
+  .quiz {
+    display: none;
+  }
+  .scoredisplay {
+    display: none;
+  }
+
+  .timerout {
+    display: none;
+  }
+}
+
+.start {
+  background-color: aqua;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+}
+
+.submit {
+  background-color: rgb(79, 221, 79);
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+}
+.back {
+  background-color: grey;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+}
+
+@mixin flex-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+#check {
+  display: none;
+}
+
+.wrapper {
+  .primary-header {
+    background-color: rgb(119, 128, 128);
+    color: white;
+    position: sticky;
+    padding: 2rem 3rem;
+    @include flex-me();
+    justify-content: space-between;
+    .left {
+      @include flex-me();
+    }
+    .right {
+      font-size: 1.5rem;
+      .navigation {
+        @include flex-me();
+      }
+    }
+  }
+
+  .subject {
+    background-color: aqua;
+    padding: 2rem 3rem;
+    @include flex-me();
+    justify-content: space-between;
+    .timer {
+      font-weight: 500;
+      font-size: 2rem;
+    }
+  }
+
+  .welcome {
+    .message {
+      h3 {
+        font-size: 2rem;
+        padding: 2rem 3rem;
+      }
+      p {
+        font-size: 1.5rem;
+        padding: 2rem 3rem;
+      }
+    }
+
+    .startb {
+      padding: 2rem 3rem;
+    }
+  }
+  .quiz {
+    border: 1px solid black;
+    padding: 2rem 3rem;
+    h3 {
+      margin-bottom: 3rem;
+    }
+    input,
+    p,
+    label {
+      margin-top: 1rem;
+    }
+
+    p {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .buttons {
+      padding-top: 2rem;
+    }
+  }
+
+  .scoredisplay {
+    padding: 2rem 3rem;
+    h3 {
+      color: rgb(84, 230, 84);
+    }
+    .score {
+        padding-top: 2rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+
+  .timerout {
+    padding: 2rem 3rem;
+    h3 {
+      color: red;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+}
